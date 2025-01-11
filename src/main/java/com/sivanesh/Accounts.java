@@ -24,7 +24,7 @@ public class Accounts{
         }
     }
 
-    List<Transaction> transactions = new ArrayList<Transaction>();
+    List<Transaction> transactions = new ArrayList<>();
 
     public void myTransaction(){
         for(Transaction transaction : transactions){
