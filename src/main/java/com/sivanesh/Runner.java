@@ -21,7 +21,6 @@ public class Runner {
                     int age = sc.nextInt();
                     System.out.println("Please enter your Phone Number: ");
                     String phoneNumber = sc.next();
-
                     Customer newCustomer = new Customer(age, name, phoneNumber);
                     int newAccountNumber = (int) (Math.random() * 1000000000);
                     do {
@@ -42,7 +41,7 @@ public class Runner {
                     String c = sc.next();
                     String cusPassword = "";
                     if (c.equals("y")) {
-                        String ReCusPassword = "  ";
+                        String ReCusPassword;
                         System.out.println("Create a new Password: ");
                         cusPassword = sc.next();
                         System.out.println("Please re-enter the Password: ");
@@ -83,8 +82,8 @@ public class Runner {
                             accountNumReset = sc.next();
                         }
                         Customer customerToResetPassword = customers.get(accountNumReset);
-                        String resetForgetPassword = "";
-                        String verifyResetForgetPassword = "";
+                        String resetForgetPassword;
+                        String verifyResetForgetPassword;
                         System.out.println("Enter new Password:");
                         resetForgetPassword = sc.next();
                         System.out.println("Please re-enter your Password:");
@@ -103,7 +102,7 @@ public class Runner {
 
                     System.out.println("1-To deposit Amount\n2-To withdraw Amount\n3-To Check Balance\n4-To view Account Information's\n5-To Reset Your Password\n6-To view Transactions\n7-Log-out");
                     int choice = sc.nextInt();
-                    String accountInfo = null;
+                    String accountInfo;
                     Customer currentCustomer = null;
                     if (choice < 8) {
                         System.out.println("Enter Account Number: ");
@@ -185,7 +184,7 @@ public class Runner {
                             String ReCusResetPassword = sc.next();
                             while (!cusResetPassword.equals(ReCusResetPassword)) {
                                 System.out.println("Password Mismatch,Create a new Password: ");
-                                cusPassword = sc.next();
+                                cusResetPassword = sc.next();
                                 System.out.println("Please re-enter your Password: ");
                                 ReCusResetPassword = sc.next();
                             }
